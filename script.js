@@ -28,32 +28,11 @@ const heartSpot = document.getElementById('heartButton')
 
 // const heart = document.querySelectorAll('.heart')
 
-// likeLike.addEventListener('click', () => heartSpot.innerText = fullHeart);
-
-
-
-// function heartClicker(event){
-//     const heart = event.target;
-
-//     heartSpot.addEventListener('click', () => {
-//         console.log('you have clicked me')
-//         if (heart.innerText = blankHeart) {
-//         heart.innerText = fullHeart;
-//         heart.className = "activated";
-//         } else {
-//         heart.innerText = blankHeart;
-//         heart.className = "";
-//         }
-//     })
-// }
-
-
 
 //THIRD - SUBMIT - CAPTION GENERATOR
 //target form - .captionForm
 //addEventListner - Submit
 // function: will append new Caption to space below form via p tag
-
 
 function addUserCaption(event) {
     let captionLog = document.getElementById('captions').value;
