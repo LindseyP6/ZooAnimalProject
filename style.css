@@ -48,6 +48,6 @@ h1 {
     height: 250px;
 }
 
-.activated-heart {
-    color: green;
+.activated {
+    color: rgb(1, 94, 1);
   }
