@@ -6,103 +6,63 @@ function fetchAnimals() {
     .then(res => res.json())
     .then(data => data.forEach(addAnimalsToDiv))
 }
-// fetchCharacters();
 
 function addAnimalsToDiv(animal) {
     const imageLocation = document.getElementById('image')
     imageLocation.src = animal.image_link
-    // const imageLocation2 = document.getElementById('image2')
-    // imageLocation2.src = animal.image_link
-    // const imageLocation3 = document.getElementById('image3')
-    // imageLocation2.src = animal.image_link
-    // const imageLocation4 = document.getElementById('image4')
-    // imageLocation2.src = animal.image_link
 }
 
 window.addEventListener('DOMContentLoaded', fetchAnimals)
 
-const EMPTY_HEART = '♡'
-const FULL_HEART = '♥'
-
-function heartClicker() {
-    const heartSpan = document.createElement('span')
-    heartSpan.innerText = EMPTY_HEART
-    const heartLocation = document.getElementsByClassName('heart')[0]
-    heartLocation.append(heartSpan)
-
-    heartSpan.
-    console.log('something is happening')
-}
-
-heartClicker();
-
-    // if ( heart.innerText === EMPTY_HEART) {
-    //     heart.innerText = FULL_HEART;
-    //     heart.className = "activated-heart";
-    //   } else {
-    //     heart.innerText = EMPTY_HEART;
-    //     heart.className = "";
-    //   }
-
-    // .addEventListener('click',  )
-    // create Span next to ul.heart and add empty_Heart 
-    // add logic if empty then fill when clicked
-
-
-
-// const articleHearts = document.getElementsByClassName(".heart");
-
-// function likeCallback(e) {
-//   const heart = e.target;
-//   mimicServerCall("bogusUrl")
-//     .then(function(){
-//       if ( heart.innerText === EMPTY_HEART) {
-//         heart.innerText = FULL_HEART;
-//         heart.className = "activated-heart";
-//       } else {
-//         heart.innerText = EMPTY_HEART;
-//         heart.className = "";
-//       }
-//     })
-//     .catch(function(error) {
-//       const modal = document.getElementById("modal");
-//       modal.className = "";
-//       modal.innerText = error;
-//       setTimeout(() =>  modal.className = "hidden", 3000);
-//     });
-// }
-
-// for (const glyph of articleHearts) {
-//   glyph.addEventListener("click", likeCallback);
-// }
-
 //SECOND - CLICK EVENT - HEART LIKER
+// target #heartButton
+//addEventListener - Click  
+// function should change heart from empty heart to full heart when clicked
 
 //class .heart will need a new span with the heart image, add JS to make heart clickable
-// const EMPTY_HEART = '♡'
-// const FULL_HEART = '♥'
 
-// const articleHearts = document.querySelectorAll(".like-glyph");
+const blankHeart = '♡'
+const fullHeart = '♥'
+const likeLine = document.getElementById('likeLine')
+const heartSpot = document.getElementById('heartButton')
 
-// function likeCallback(e) {
-//   const heart = e.target;
-//   mimicServerCall("bogusUrl")
-//     .then(function(){
-//       if ( heart.innerText === EMPTY_HEART) {
-//         heart.innerText = FULL_HEART;
-//         heart.className = "activated-heart";
-//       } else {
-//         heart.innerText = EMPTY_HEART;
+// const heart = document.querySelectorAll('.heart')
+
+// likeLike.addEventListener('click', () => heartSpot.innerText = fullHeart);
+
+
+
+// function heartClicker(event){
+//     const heart = event.target;
+
+//     heartSpot.addEventListener('click', () => {
+//         console.log('you have clicked me')
+//         if (heart.innerText = blankHeart) {
+//         heart.innerText = fullHeart;
+//         heart.className = "activated";
+//         } else {
+//         heart.innerText = blankHeart;
 //         heart.className = "";
-//       }
+//         }
 //     })
-//     .catch(function(error) {
-//       const modal = document.getElementById("modal");
-//       modal.className = "";
-//       modal.innerText = error;
-//       setTimeout(() =>  modal.className = "hidden", 3000);
-//     });
 // }
+
 
 
 //THIRD - SUBMIT - CAPTION GENERATOR
+//target form - .captionForm
+//addEventListner - Submit
+// function: will append new Caption to space below form via p tag
+
+
+function addUserCaption(event) {
+    let captionLog = document.getElementById('captions').value;
+    let userInput = document.createElement('p');
+    userInput.textContext = captionLog;
+    event.target.reset();
+
+    event.preventDefault();
+    console.log('clicked!')
+}
+const captionForm = document.getElementById('captioForm')
+captionForm.addEventListener('submit', addUserCaption);
