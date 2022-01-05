@@ -22,13 +22,13 @@ h1 {
     text-align: right;
 }
 
-#animalContent {
+/* #animalContent {
     align-items: center;
     color: green;
-    display: inline;
+    /* display: inline; */
     /* margin: 10px;
     padding: 20px; */
-}
+/* } */
 
 #firstAnimal, 
 #secondAnimal,
@@ -36,7 +36,35 @@ h1 {
 #fourthAnimal {
     /* border-radius: center; */
     border: 1px solid #1d6c2b;
-    text-align: center;
-    padding: 10px;
+    text-align: left;
+    padding: 20px;
     margin: 0px;
+
+    /* max-width: 31.333%;
+    padding: 0 10px;
+    height: 240px; */
+    display: inline-block;
 }
+
+.animalImages img {
+    width: 250px;
+    height: 250px;
+}
+/* 
+  .animalContent {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 50px;
+            padding: 30px;
+        }
+  
+        .photo {
+            max-width: 31.333%;
+            padding: 0 10px;
+            height: 240px;
+        }
+        
+        .animalContent img {
+            width: 100%;
+            height: 100%;
+        }  */
