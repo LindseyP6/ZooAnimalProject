@@ -23,16 +23,12 @@ h1 {
 }
 
 
-#firstAnimal, 
-#secondAnimal,
-#thirdAnimal, 
-#fourthAnimal {
+#firstAnimal {
     /* border-radius: center; */
     border: 1px solid #1d6c2b;
     text-align: left;
     padding: 20px;
     margin: 0px;
-
     /* max-width: 31.333%;
     padding: 0 10px;
     height: 240px; */
@@ -40,8 +36,8 @@ h1 {
 }
 
 .animalImages img {
-    width: 250px;
-    height: 250px;
+    width: 400px;
+    height: 400px;
 }
 
 #heartButton {
