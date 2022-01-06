@@ -11,6 +11,9 @@ function addAnimalsToDiv(animal) {
     const imageLocation = document.getElementById('image')
     imageLocation.src = animal.image_link
 
+    const animalName = document.getElementById('animalName')
+    animalName.innerText = "Meet Mr. " + animal.name
+
 }
 window.addEventListener('DOMContentLoaded', fetchAnimals)
 
@@ -24,9 +27,9 @@ window.addEventListener('DOMContentLoaded', fetchAnimals)
 const heartbutton = document.querySelector("heartButton");
 
 heartButton.addEventListener("click", function() {
-    const curColour = heartButton.style.backgroundColor;
+    const curColour = heartButton.innerText;
 
-    heartButton.style.backgroundColor = curColour === 'white' ? 'green' : 'white';
+    heartButton.innerText = curColour === '♡' ? '♥' : '♡';
 });
 
 //THIRD - SUBMIT - CAPTION GENERATOR
@@ -42,11 +45,10 @@ function addUserCaption(event) {
 
     event.preventDefault();
 
-    const submittedCaptions = document.getElementById('submittedCaptions')
-    const userCaption = event.target["captions"].value
-    // document.getElementById('captions');
-    let addedCaption = document.createElement('p');
-    addedCaption.textContext = userCaption.value;
+    const submittedCaptions = document.getElementById('responses')
+    const userCaption = document.getElementById('captions')
+    let addedCaption = document.createElement('li');
+    addedCaption.innerText = userCaption.value;
     submittedCaptions.appendChild(addedCaption);
 
     event.target.reset();
