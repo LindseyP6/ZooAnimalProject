@@ -4,7 +4,7 @@
 	<head>
 		<title>Animal Caption Contest</title>
 		<link rel="stylesheet" href="style.css">
-		<script src="script.js"></script>
+
 	</head>
 	<body>
 		<div id="header">
@@ -26,53 +26,18 @@
 				  />
 				</div>
 				<ul>
-					<li class="likeLine">Do you love this animal? <span id="heartButton"></span></li>
+					<li class="likeLine">Do you love this animal? <span id="heartButton">☐</span></li>
 				</ul>
 				<form id="captionForm">
 					<input type="text" placeholder="CAPTION THIS!!" id="captions" name="captions">
 					<input type="submit" value="Submit Your Caption!">
 				</form>
-			</div>
-			<br>
-			<div id="secondAnimal">
-				<div class="animalImages">
-					<img
-					id="image2"
-					src=""
-					alt="RandomZooAnimals"
-				  />
+				<br>
+				<div id="submittedCaptions"> 
+					<h2>Your Caption Rocks!</h2>
 				</div>
-				<br>
-				<span>Do you love this animal?   </span>
-				<br>
-			</div>
-			<br>
-
-			<div id="thirdAnimal">
-				<div class="animalImages">
-					<img
-					id="image3"
-					src=""
-					alt="RandomZooAnimals"
-				  />
-				</div>
-				<br>
-				<span>Do you love this animal?   </span><span class="heart"></span>
-				<br>
-			</div>
-			<br>
-			<div id="fourthAnimal">
-				<div class="animalImages">
-					<img
-					id="image4"
-					src=""
-					alt="RandomZooAnimals"
-				  />
-				</div>
-				<br>
-				<span>Do you love this animal?   </span><span class="heart"></span>
-				<br>
 			</div>
 		</div>
+		<script defer src="script.js"></script>
 	</body>
 </html>

@@ -9,11 +9,7 @@ body {
     display: block;
 }
 
-#header li {
-    list-style-type: none;
-}
-
-ul {
+li, ul {
     list-style-type: none;
 }
 
@@ -48,6 +44,8 @@ h1 {
     height: 250px;
 }
 
-.activated {
-    color: rgb(1, 94, 1);
+#heartButton {
+    color: black
+    font-size: 25px;
+    /* make the check box bigger */
   }

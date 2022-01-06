@@ -10,38 +10,49 @@ function fetchAnimals() {
 function addAnimalsToDiv(animal) {
     const imageLocation = document.getElementById('image')
     imageLocation.src = animal.image_link
-}
 
+    const submittedCaptions = document.getElementById('submittedCaptions')
+    const userCaption = document.getElementById('captions');
+}
 window.addEventListener('DOMContentLoaded', fetchAnimals)
 
 //SECOND - CLICK EVENT - HEART LIKER
 // target #heartButton
 //addEventListener - Click  
-// function should change heart from empty heart to full heart when clicked
+// function should change heart from empty heart to full heart when clicked, if empty display === empty, if click display full heart
 
 //class .heart will need a new span with the heart image, add JS to make heart clickable
 
-const blankHeart = '♡'
-const fullHeart = '♥'
-const likeLine = document.getElementById('likeLine')
-const heartSpot = document.getElementById('heartButton')
+const heartbutton = document.querySelector("heartButton");
 
-// const heart = document.querySelectorAll('.heart')
+heartButton.addEventListener("click", function() {
+    const curColour = heartButton.style.backgroundColor;
 
+    heartButton.style.backgroundColor = curColour === 'white' ? 'green' : 'white';
+});
 
 //THIRD - SUBMIT - CAPTION GENERATOR
-//target form - .captionForm
+//target form - #captionForm
 //addEventListner - Submit
 // function: will append new Caption to space below form via p tag
+// take what the user types in and display it
+// target where the user input is
+//create p tag
+//take user input and append the p
 
 function addUserCaption(event) {
-    let captionLog = document.getElementById('captions').value;
-    let userInput = document.createElement('p');
-    userInput.textContext = captionLog;
     event.target.reset();
-
     event.preventDefault();
-    console.log('clicked!')
+
+    const submittedCaptions = document.getElementById('submittedCaptions')
+    const userCaption = document.getElementById('captions');
+    let addedCaption = document.createElement('p');
+    addedCaption.textContext = `${userCaption}`;
+
+    submittedCaptions.appendChild(addedCaption);
+
 }
-const captionForm = document.getElementById('captioForm')
+const captionForm = document.getElementById('captionForm')
 captionForm.addEventListener('submit', addUserCaption);
+
+// document.getElementById('captions').value = document.getElementById('newCaption').value
