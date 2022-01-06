@@ -11,8 +11,6 @@ function addAnimalsToDiv(animal) {
     const imageLocation = document.getElementById('image')
     imageLocation.src = animal.image_link
 
-    const submittedCaptions = document.getElementById('submittedCaptions')
-    const userCaption = document.getElementById('captions');
 }
 window.addEventListener('DOMContentLoaded', fetchAnimals)
 
@@ -41,16 +39,17 @@ heartButton.addEventListener("click", function() {
 //take user input and append the p
 
 function addUserCaption(event) {
-    event.target.reset();
+
     event.preventDefault();
 
     const submittedCaptions = document.getElementById('submittedCaptions')
-    const userCaption = document.getElementById('captions');
+    const userCaption = event.target["captions"].value
+    // document.getElementById('captions');
     let addedCaption = document.createElement('p');
-    addedCaption.textContext = `${userCaption}`;
-
+    addedCaption.textContext = userCaption.value;
     submittedCaptions.appendChild(addedCaption);
 
+    event.target.reset();
 }
 const captionForm = document.getElementById('captionForm')
 captionForm.addEventListener('submit', addUserCaption);
