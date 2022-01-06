@@ -59,7 +59,7 @@ h2 {
       font-family:'Courier New', Courier, monospace
   }
 
-  .button {
+  #button {
       background-color: #5c662d;
       color: white;
   }
